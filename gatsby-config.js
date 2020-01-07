@@ -27,6 +27,34 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: "gatsby-source-wordpress",
+      options: {
+        baseUrl: "",
+        protocol: "https",
+        hostingWPCOM: false,
+        useACF: true,
+        acfOptionPageIds: [],
+        verboseOutput: false,
+        perPage: 100,
+        searchAndReplaceContentUrls: {
+          sourceUrl: "https://",
+          replacementUrl: "https://localhost:8000"
+        },
+        concurrentRequests: 10,
+        includeRoutes: [
+          "**/categories",
+          "**/posts",
+          "**/pages",
+          "**/taxonomies",
+          "**/users"
+        ],
+        excludeRoutes: [],
+        normalizer: function({ entities }) {
+          return entities
+        }
+      }
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
