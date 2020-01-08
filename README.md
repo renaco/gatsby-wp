@@ -96,4 +96,4 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
-[Tutoril Wp gatsby](https://www.iamtimsmith.com/blog/how-to-build-a-blog-with-wordpress-and-gatsby-part-2)
+[Tutorial Wp gatsby](https://www.iamtimsmith.com/blog/how-to-build-a-blog-with-wordpress-and-gatsby-part-2)

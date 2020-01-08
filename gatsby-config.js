@@ -30,7 +30,7 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        baseUrl: "",
+        baseUrl: process.env.API_URL,
         protocol: "https",
         hostingWPCOM: false,
         useACF: true,
@@ -38,7 +38,7 @@ module.exports = {
         verboseOutput: false,
         perPage: 100,
         searchAndReplaceContentUrls: {
-          sourceUrl: "https://",
+          sourceUrl: `https://${process.env.API_URL}`,
           replacementUrl: "https://localhost:8000"
         },
         concurrentRequests: 10,
@@ -50,7 +50,7 @@ module.exports = {
           "**/users"
         ],
         excludeRoutes: [],
-        normalizer: function({ entities }) {
+        normalizer: function ({ entities }) {
           return entities
         }
       }
