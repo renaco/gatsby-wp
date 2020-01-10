@@ -15,25 +15,15 @@ const config = {
     '*.js.map',
     '*.json',
     'manifest.webmanifest',
-    'admin/*',
-    'static/**/*',
-    'galeria/*',
-    'img/*',
     'icons/*',
     'page-data/*',
-    'propuestas/*',
-    'hoja-de-vida/*',
-    'videos/*',
-    'junta-directiva/*',
     'images/*',
     'static/*',
     '404/'
   ],
   deleteRemote: false,
   exclude: [
-    'app-cal/',
     'app-cal/*',
-    'app-cal/**/*'
   ],
   forcePasv: true
 }
