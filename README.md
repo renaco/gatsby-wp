@@ -98,3 +98,19 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 [Oficial Tutorial gatsby](https://www.gatsbyjs.org/tutorial/wordpress-source-plugin-tutorial/)
 [Tutorial Wp gatsby](https://www.iamtimsmith.com/blog/how-to-build-a-blog-with-wordpress-and-gatsby-part-2)
+
+## Local develop
+
+Copy .env.example to .env
+
+Install dependencies 
+
+```
+yarn install
+```
+
+Run local server for develop
+
+```
+yarn develop
+```
