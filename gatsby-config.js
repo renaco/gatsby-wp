@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -28,32 +30,17 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-wordpress",
+      resolve: `gatsby-source-wordpress`,
       options: {
+        /*
+         * The base URL of the WordPress site without the trailingslash and the protocol. This is required.
+         * Example : 'dev-gatbsyjswp.pantheonsite.io' or 'www.example-site.com'
+         */
         baseUrl: process.env.API_URL,
-        protocol: "https",
+        protocol: `https`,
         hostingWPCOM: false,
-        useACF: true,
-        acfOptionPageIds: [],
-        verboseOutput: false,
-        perPage: 100,
-        searchAndReplaceContentUrls: {
-          sourceUrl: `https://${process.env.API_URL}`,
-          replacementUrl: "https://localhost:8000"
-        },
-        concurrentRequests: 10,
-        includeRoutes: [
-          "**/categories",
-          "**/posts",
-          "**/pages",
-          "**/taxonomies",
-          "**/users"
-        ],
-        excludeRoutes: [],
-        normalizer: function ({ entities }) {
-          return entities
-        }
-      }
+        useACF: false,
+      },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
