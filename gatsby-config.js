@@ -40,6 +40,13 @@ module.exports = {
         protocol: `https`,
         hostingWPCOM: false,
         useACF: false,
+        includeRoutes: [
+          "**/categories",
+          "**/posts",
+          "**/pages",
+          "**/media",
+          "**/tags"
+        ]
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
