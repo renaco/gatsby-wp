@@ -16,12 +16,15 @@ export default ({ data }) => {
           <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
         </div>
       ))}
-      <h4>Categories</h4>
-      {data.allWordpressPost.edges.map(({ node }) => (
-        <div index={node.id}>
-          {console.log(node)}
+
+      {/* <h4>Categories</h4> */}
+      {/* {data.allWordpressPost.edges.map(({ node }) => (
+        <div>
+          algo 
+          {console.log(node.categories)}
         </div>
-      ))}
+      ))} */}
+
     </Layout>
   )
 }
@@ -31,12 +34,6 @@ export const pageQuery = graphql`
     allWordpressPost(sort: { fields: [date] }) {
       edges {
         node {
-          categories{
-            id
-            link
-            slug
-            name
-          }
           title
           excerpt
           slug

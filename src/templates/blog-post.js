@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { graphql } from 'gatsby' 
+import { graphql, Link } from 'gatsby' 
 
 export default ({ data }) => {
   const post = data.allWordpressPost.edges[0].node
@@ -8,6 +8,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <div>
+        <Link to="/">Regresar</Link>
         <h1>{post.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.content }} />
       </div>
