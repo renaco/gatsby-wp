@@ -9,7 +9,7 @@
 const path = require(`path`)
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPages } = actions
+  const { createPage } = actions
   return graphql(`
     {
       allWordpressPost(sort: { fields: [date]}) {
@@ -24,6 +24,15 @@ exports.createPages = ({ graphql, actions }) => {
       }
     }
   `).then(result => {
-    console.log(JSON.stringify(result, null, 4))
+    result.data.allWordpressPost.edges.forEach(({ node }) => {
+      console.log(node)
+      createPage({
+        path: node.slug,
+        component: path.resolve(`./src/templates/blog-post.js`),
+        context: {
+          slug: node.slug
+        }
+      })
+    })
   })
 }

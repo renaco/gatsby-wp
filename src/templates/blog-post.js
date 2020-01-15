@@ -17,7 +17,7 @@ export default ({ data }) => {
 
 export const query = graphql`
   query($slug: String!) {
-    allWordpressPost(filter: { slug: { eq: $slug }}) {
+    allWordpressPost(filter: { slug: { eq: $slug } }) {
       edges {
         node {
           title
