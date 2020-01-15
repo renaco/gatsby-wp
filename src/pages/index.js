@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+// import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -7,38 +7,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO title="home" />
-      <h4>Posts</h4>
-      {data.allWordpressPost.edges.map(({ node }) => (
-        <div key={node.slug}>
-          <Link to={node.slug}>
-            <p>{node.title}</p>
-          </Link>
-          <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-        </div>
-      ))}
-
-      {/* <h4>Categories</h4> */}
-      {/* {data.allWordpressPost.edges.map(({ node }) => (
-        <div>
-          algo 
-          {console.log(node.categories)}
-        </div>
-      ))} */}
-
+      <h4>Home</h4>
     </Layout>
   )
 }
-
-export const pageQuery = graphql`
-  query {
-    allWordpressPost(sort: { fields: [date] }) {
-      edges {
-        node {
-          title
-          excerpt
-          slug
-        }
-      }
-    }
-  }
-`
