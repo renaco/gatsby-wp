@@ -16,6 +16,7 @@
     "gatsby-plugin-sharp": "^2.3.5",
     "gatsby-plugin-sitemap": "^2.2.24",
     "gatsby-source-filesystem": "^2.1.40",
+    "gatsby-source-graphql": "^2.1.31",
     "gatsby-source-wordpress": "^3.1.57",
     "gatsby-transformer-sharp": "^2.3.7",
     "path": "^0.12.7",
@@ -31,6 +32,13 @@
     "gatsby"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -40,12 +48,5 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

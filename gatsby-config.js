@@ -30,24 +30,11 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-wordpress`,
+      resolve: `gatsby-source-graphql`,
       options: {
-        /*
-         * The base URL of the WordPress site without the trailingslash and the protocol. This is required.
-         * Example : 'dev-gatbsyjswp.pantheonsite.io' or 'www.example-site.com'
-         */
-        baseUrl: process.env.API_URL,
-        protocol: `https`,
-        hostingWPCOM: false,
-        useACF: false,
-        includeRoutes: [
-          "**/categories",
-          "**/posts",
-          "**/pages",
-          "**/media",
-          "**/tags",
-          "**/taxonomies"
-        ]
+        typeName: `WPGraphQL`,
+        fieldName: `wpgraphql`,
+        url: process.env.API_URL
       },
     },
     "gatsby-transformer-sharp",
